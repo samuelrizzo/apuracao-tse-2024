@@ -44,6 +44,7 @@ export class TSEScraper {
         const page = this.browser.getPage();
         await page.click('input[formcontrolname="uf"]');
         await page.fill('input[formcontrolname="uf"]', estado);
+        await page.waitForTimeout(2000);
         await page.waitForSelector('#mat-autocomplete-0 mat-option');
         await page.click(`mat-option:has-text("${estado}")`);
     }
@@ -59,6 +60,7 @@ export class TSEScraper {
         const page = this.browser.getPage();
         await page.click('input[formcontrolname="municipio"]');
         await page.fill('input[formcontrolname="municipio"]', cidade);
+        await page.waitForTimeout(2000);
         await page.waitForSelector('#mat-autocomplete-1 mat-option');
         await page.click(`mat-option:has-text("${cidade}")`);
         await page.click('text=Confirmar');
