@@ -80,7 +80,7 @@ async function main(): Promise<void> {
                         estado.nome.toLowerCase() === estadoInput.toLowerCase()
                 );
                 if (estadoValido) {
-                    estadoInput = estadoValido.sigla;
+                    estadoInput = estadoValido.nome;
                     break;
                 } else {
                     console.log('Estado inválido. Por favor, tente novamente.\n');
